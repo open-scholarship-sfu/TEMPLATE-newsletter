@@ -1,0 +1,24 @@
+# How to cite this newsletter. REPLACE the placeholders below with your own
+# newsletter's details. Keep the "references" section: it credits the
+# template this newsletter is based on.
+cff-version: 1.2.0
+message: "If you cite or reuse this newsletter, please cite it as below."
+title: "Your Newsletter"
+abstract: >-
+  The source of Your Newsletter: each issue written in Markdown, rendered
+  into email-ready HTML with Quarto, and kept with a record of what was sent.
+authors:
+  - name: "Your organization"
+type: software
+license: CC-BY-4.0
+# repository-code: "https://github.com/your-org/your-newsletter"
+keywords:
+  - newsletter
+references:
+  - type: software
+    title: "SFU Open Scholarship newsletter"
+    abstract: "The newsletter template this newsletter is based on."
+    authors:
+      - name: "SFU Open Scholarship Initiative, Simon Fraser University"
+    repository-code: "https://github.com/open-scholarship-sfu/newsletter"
+    license: CC-BY-4.0

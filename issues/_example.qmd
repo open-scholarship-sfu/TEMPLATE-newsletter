@@ -1,0 +1,95 @@
+---
+# EXAMPLE ISSUE: every component in one place, to copy from.
+# Files starting with _ aren't rendered with the project. To preview it,
+# copy it to a name without the _, such as issues/2099-01-example.qmd.
+title: "An example issue"
+subtitle: "Every component the template offers, with notes on how to write it."
+issue: 1
+date: 2026-12-01
+preheader: "An example issue showing every component of the newsletter template."
+---
+
+Hi everyone,
+
+Text before the first `##` heading is the intro: a short note from the
+editors. Use *italics*, **bold** and [links](https://example.org).
+
+The editorial team
+
+## Featured story
+
+::: {.feature image="images/feature.png" alt="Placeholder image" link="https://example.org" cap="A caption describes the image" credits="Photographer name"}
+### A featured story with an image
+
+The image is clickable when the block has `link="..."`, and `cap=` and
+`credits=` add a small caption under it.
+
+[Read the story](https://example.org){.button}
+:::
+
+## Image beside text
+
+::: {.wrap image="images/card-1.png" alt="Placeholder image" side="right" cap="A caption under the image"}
+#### Text flows around the image
+
+Write a paragraph or more beside an image placed with `side="right"` or
+`side="left"`. The text runs down beside the image and continues full width
+underneath it. On phones, the image moves above the text instead. Use
+`width="..."` to make the image larger or smaller; it's 200 pixels wide by
+default.
+:::
+
+## Upcoming events {.tinted}
+
+This section is shaded: its heading is written `## Upcoming events {.tinted}`.
+
+::: {.event date="2026-12-10" time="10:00 to 11:30 a.m." place="Online"}
+### An event with a date, time and place
+
+Write the date as YYYY-MM-DD and the weekday is filled in for you.
+
+[Register](https://example.org){.button .secondary}
+:::
+
+## Opportunities
+
+::: highlight
+#### A highlight box
+
+For deadlines and calls. **Apply by January 15.**
+:::
+
+::: two-col
+::: {.col image="images/card-1.png" alt="Placeholder image" link="https://example.org"}
+#### Left column
+
+Short description. [A link](https://example.org)
+:::
+
+::: {.col image="images/card-2.png" alt="Placeholder image" cap="Columns can have captions too"}
+#### Right column
+
+Short description. [A link](https://example.org)
+:::
+:::
+
+## Community spotlight
+
+::: {.spotlight image="images/spotlight.png" alt="Placeholder portrait"}
+#### Name, role
+
+> "A short quote from the person."
+
+A sentence or two about them.
+:::
+
+## Resources
+
+- [A resource](https://example.org): what it's for
+- [Another resource](https://example.org): what it's for
+
+---
+
+A paragraph containing only buttons becomes a row of buttons:
+
+[Solid button](https://example.org){.button} [Outlined button](https://example.org){.button .secondary}

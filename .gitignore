@@ -1,0 +1,18 @@
+# Quarto's working files and editor settings
+/.quarto/
+/.luarc.json
+*_files/
+
+# Issue images live on your image host, not in the repository...
+issues/images/*
+# ...except the placeholders used by the example and the starter
+!issues/images/card-1.png
+!issues/images/card-2.png
+!issues/images/feature.png
+!issues/images/spotlight.png
+
+# Archives and system files
+*.zip
+._*
+.DS_Store
+Thumbs.db

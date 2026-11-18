@@ -1,0 +1,92 @@
+project:
+  type: default
+  render:
+    - "issues/*.qmd"
+  output-dir: _output
+  post-render: scripts/fragment.ts
+  resources:
+    - "issues/images/**"
+
+format:
+  newsletter-html: default
+
+# ---------------------------------------------------------------------------
+# Newsletter-wide settings. Every issue picks these up; an issue can override
+# any of them in its own front matter.
+# ---------------------------------------------------------------------------
+newsletter:
+  # REPLACE: your newsletter's name, shown large in the masthead
+  name: "Your Newsletter"
+  # REPLACE: the line above the name, such as your organization or team
+  org: "Your organization"
+  # Optional: a banner image across the top, instead of the text masthead.
+  # It's shown 600px wide, so an image 1200px wide stays sharp. Put the
+  # newsletter's name in alt if it's in the image.
+  # banner:
+  #   image: "newsletter-banner.png"   # a file name on your image host, or a full https:// address
+  #   alt: "Describe the banner"
+  #   link: "https://example.org"      # optional: makes the banner clickable
+  #   show-date: false                 # optional: hide the issue/date line under the banner
+
+  # Optional logo shown above the name (a light or reversed version works
+  # best on the dark masthead). Use a full https:// address.
+  # logo: "https://example.org/logo-reversed.png"
+  # logo-width: 150
+
+  # Email apps need full image addresses. Upload each issue's images to your
+  # mailing platform's image library (or any web host) and put that folder's
+  # address here; in issues, write just the file name (image="photo.jpg").
+  # Leave empty while trying the template with local images.
+  image-base-url: ""
+
+  # true: output only the newsletter card, for pasting into your mailing
+  #       platform's HTML editor (the platform provides the page width and
+  #       background).
+  # false: a complete standalone HTML page with its own background.
+  fragment: true
+
+  # Show the "In this issue" box after the intro.
+  in-this-issue: true
+
+  # Change these to your own palette. Keep enough contrast between text and
+  # its background (checkers such as https://webaim.org/resources/contrastchecker/ help).
+  colors:
+    primary: "#26215C"          # masthead, headings, buttons, footer
+    accent: "#8FD9BF"           # issue/date line in the masthead
+    link: "#3B37B0"
+    ink: "#24232E"              # body text
+    muted: "#686775"            # captions, dates, small print
+    tint: "#F2F1F8"             # sections marked {.tinted}
+    highlight: "#DDF3EA"        # ::: highlight boxes
+    line: "#E2E0EC"
+    page: "#ECEBF3"             # background around the email (fragment: false)
+    on-primary: "#FFFFFF"
+    on-primary-muted: "#B9B6DC"   # also the bar beside quotes, unless quote: is set
+    # quote: "#B9B6DC"            # optional: the bar beside quotes
+
+  # Email-safe font stacks. Don't wrap names in quotes; spaces are fine.
+  fonts:
+    heading: Helvetica Neue, Helvetica, Arial, sans-serif
+    body: Helvetica Neue, Helvetica, Arial, sans-serif
+
+  footer:
+    # REPLACE: one sentence about the newsletter
+    about: "News, events and resources from our community."
+    # REPLACE: your contact address
+    email: "newsletter@example.org"
+    website:
+      label: "example.org"
+      url: "https://example.org"
+    links:
+      - label: "Join the mailing list"
+        url: "https://example.org/subscribe"
+    # Optional: a land acknowledgement, written by your organization in
+    # consultation with the Nations concerned. Markdown allowed.
+    # land-acknowledgement: >-
+    #   Your organization's land acknowledgement.
+    # Raw HTML at the end of the footer, e.g. your mailing platform's
+    # unsubscribe or manage-preferences merge tags.
+    # raw-html: '<p style="margin:0; font-size:12px; color:#B9B6DC;">UNSUBSCRIBE TAG HERE</p>'
+
+  # Small text under the email card. Markdown allowed.
+  below-footer: "You're receiving this because you subscribed to our newsletter."
